@@ -1,0 +1,22 @@
+{
+  "name": "calicode-gui",
+  "version": "1.0.0",
+  "description": "The editor and code engine for calicode powered by the PIXIJS rendering engine. To run instance use:\r ```bash\r git clone https://github.com/ScReGr/calicode-gui.git\r cd calicode-gui\r npm install\r npm test\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScReGr/calicode-gui%1B%5BD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScReGr/calicode-gui%1B%5BD/issues"
+  },
+  "homepage": "https://github.com/ScReGr/calicode-gui%1B%5BD#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
