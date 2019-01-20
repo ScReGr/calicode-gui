@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Calicode</title>
+		<link rel="shortcut icon" href="icon.png">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	</head>
-	<body>
-		<div id="topNavBar">
-			<span id="buildNumberParent"><span id="buildNumber">Calicode Alpha</span><span> build V.0.0.3</span></span>
-		</div>
+	<body style="background-color:#0d0d0d">
+		<div style="height:2rem">
+					<nav class="navbar" id="topNavBar">
+						<a href="index.html" class="logo" style="text-decoration:none" id="buildNumberParent">
+							<img src="logo.svg" style="height:1.3rem;vertical-align:middle">
+							<h4 style="display:inline-block;color:white" id="buildNumber">&nbspCalicode</h4>
+						</a>
+						<ul class="main-nav">
+								<li>
+									<a href="search.html"><img src="search.svg" style="height:1.3rem;vertical-align:middle;margin-left:1.5em"></a>
+								</li>
+								<li>
+										<a href="create.html"><img src="create.svg" style="height:1.3rem;vertical-align:middle;margin-left:1.5em"></a>
+								</li>
+								<li>
+									<a href="mystuff.html"><img src="mystuff.svg" style="height:1.3rem;vertical-align:middle;margin-left:1.5em"></a>
+								</li>
+								<li>
+										<a href="profile.html"><img src="avatar.svg" style="height:1.3rem;vertical-align:middle;margin-left:1.5em"></a>
+								</li>
+								<br>
+						</ul>
+					</nav>
+				</div>
 		<div id="rendererContainer" class="container"></div>
 		<div id="fileContainer" class="container"></div>
 		<div id="editorContainer" class="container"></div>

@@ -1,37 +1,67 @@
+@font-face {
+  font-family: Montserat;
+  src: url(https://cdn.glitch.com/4518f4ab-ad64-4308-9194-30e33ae8b42b%2FMontserrat-Regular.ttf?1547689484543);
+}
+
+@font-face {
+  font-family: Montserat;
+  font-weight: bold;
+  src: url(https://cdn.glitch.com/4518f4ab-ad64-4308-9194-30e33ae8b42b%2FMontserrat-Bold.ttf?1547689484421);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 and _::-webkit-full-page-media, _:future, :root .safari_only {
+  font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
+  font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
 body {
 	background-color: #000000;
 	font-family: 'Open Sans', sans-serif;
 	color: #ffffff;
-	margin: auto 0;
-	font-weight: 300;
+	margin-top: 0em;
+ 	margin-bottom: 1em;
+	margin-left: 1em;
+ 	margin-right: 1em;
 }
 
 .container{
 	background-color: #FFFFFF;
 }
 
+
 #buildNumberParent{
 	position: absolute;
-	left: 10px;
-	top: 10px;
-}
-#buildNumber{
-	font-weight: 400;
 }
 
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+}
+.main-nav li {
+  margin: 0;
+}
+
+
 #topNavBar{
-	background-color: #272727;
+	background-color: #0d0d0d;
 	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100px;
+	width: 98%;
+	height: 60px;
 	min-width: 1240px;
 }
 
 #rendererContainer{
 	position: absolute;
-	top: 100px;
+	top: 60px;
 	left: 0px;
 	width: 640px;
 	height: 360px;
@@ -41,9 +71,10 @@ body {
 	background-color: #222222;
 	position: absolute;
 	width: 640px;
-	height: calc(100% - 460px);
-	top: 460px;
+	height: calc(100% - 390px);
+	top: 400px;
 	min-height: 190px;
+	left: 0;
 }
 
 
@@ -51,8 +82,8 @@ body {
 	background-color: #1a1a1a;
 	position: absolute;
 	width: calc(100% - 640px);
-	top: 100px;
-	height: calc(100% - 100px);
+	top: 60px;
+	height: calc(100% - 50px);
 	min-height: 550px;
 	min-width: 600px;
 	left: 640px;
