@@ -1,39 +1,16 @@
-var app = new PIXI.Application(640, 360, {backgroundColor : 0x1099bb});
-
-document.getElementById("rendererContainer").appendChild(app.view);
-
-
-var bunny = PIXI.Sprite.fromImage('assets/bunny.png')
-
-
-bunny.anchor.set(0.5);
-
-
-bunny.x = app.screen.width / 2;
-bunny.y = app.screen.height / 2;
-
-app.stage.addChild(bunny);
-
-bunny.rotation = Math.PI * (90 - 90)/360 * 2;;
-
-app.ticker.add(function(delta) {
-    // just for fun, let's rotate mr rabbit a little
-    // delta is 1 if running at 100% performance
-    // creates frame-independent transformation
-
-    systurnforward(bunny, 1)
-    sysmove(bunny, 1)
-});
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 //system functions
-const sysgoto = function(object, vector){
-	
+
+const goTo = function(object, vector){
 	return new Promise(function(resolve, reject){
 
 		const centerVector = [app.screen.width / 2, app.screen.height / 2];
 
 		object.x = centerVector[0] + vector[0];
 
-		object.y = centerVector[1] + vector[1]
+		object.y = centerVector[1] + vector[1]*-1;
 
 		resolve(true)
 	
@@ -41,7 +18,58 @@ const sysgoto = function(object, vector){
 	
 }
 
-const sysmove = function(object, steps){
+const changeXBy = function(object, value){
+
+	const centerVector = [app.screen.width / 2, app.screen.height / 2];
+
+	return new Promise(function(resolve, reject){
+
+		object.x += value;
+
+		resolve(true)
+
+	
+	});
+}
+
+const changeYBy = function(object, value){
+
+	const centerVector = [app.screen.width / 2, app.screen.height / 2];
+
+	return new Promise(function(resolve, reject){
+
+		object.y -= value;
+
+		resolve(true)
+
+	
+	});
+}
+
+const setXTo = function(object, value){
+	
+	const centerVector = [app.screen.width / 2, app.screen.height / 2];
+
+	return new Promise(function(resolve, reject){
+
+		object.x = centerVector[0] + value;
+
+	});
+}
+
+const setYTo = function(object, value){
+	
+	const centerVector = [app.screen.width / 2, app.screen.height / 2];
+
+	return new Promise(function(resolve, reject){
+
+		object.y = centerVector[1] + value*-1;
+
+	});
+}
+
+
+const move = function(object, steps){
 
 	return new Promise(async function(resolve, reject){
 		
@@ -50,7 +78,7 @@ const sysmove = function(object, steps){
 		const centerVector = [app.screen.width / 2, app.screen.height / 2]
 
 
-		await sysgoto(object, [((object.x - centerVector[0]) + (Math.cos(rotationDegrees * Math.PI / 180) * steps)), ((object.y - centerVector[1]) + (Math.sin(rotationDegrees * Math.PI / 180) * steps))])
+		await movement.goTo(object, [((object.x - centerVector[0]) + (Math.cos(rotationDegrees * Math.PI / 180) * steps)), ((object.y - centerVector[1]) + (Math.sin(rotationDegrees * Math.PI / 180) * steps))*-1])
 
 		resolve(true)
 	
@@ -58,7 +86,7 @@ const sysmove = function(object, steps){
 
 }
 
-const systurnforward = function(object, degrees){
+const turnRight = function(object, degrees){
 
 	return new Promise(function(resolve, reject){
 
@@ -84,7 +112,7 @@ const systurnforward = function(object, degrees){
 
 }
 
-const systurnbackward = function(object, degrees){
+const turnLeft = function(object, degrees){
 
 	return new Promise(function(resolve, reject){
 
@@ -107,7 +135,7 @@ const systurnbackward = function(object, degrees){
 	})
 }
 
-const syspointindirection = function(object, degrees){
+const pointInDirection = function(object, degrees){
 	return new Promise(function(resolve, reject){
 
 		object.rotation = Math.PI * (degrees - 90)/360 * 2;
@@ -118,9 +146,8 @@ const syspointindirection = function(object, degrees){
 }
 
 
-//The function below doesnt work yet
 
-const syspointtowards = function(object, vector){
+const pointTowards = function(object, vector){
 	
 	return new Promise(async function(resolve, reject){
 
@@ -128,31 +155,90 @@ const syspointtowards = function(object, vector){
 
 		const centerVector = [app.screen.width / 2, app.screen.height / 2]
 
+		const deltax = ((vector[0] + centerVector[0]) - object.x)
+		
+		const deltay = (((vector[1]*-1) + centerVector[1]) - object.y)
 
-		const deltax = vector[0] - (object.x - centerVector[0])
-		const deltay = vector[1] - (object.y - centerVector[1])
+	    var angle = Math.atan2(deltay, deltax);
 
-		if(deltay == 0){
-			if(deltax < 0){
-
-				await syspointindirection(object, 270)
-			}else{
-
-				await syspointindirection(object, 90)
-			}
-
-		}else{
-
-			if(deltay < 0){
-
-				await syspointindirection(180 + (Math.atan()))
-			}else{
-				
-				await syspointindirection(object, 90)
-			}
-		}
-
-
+	    await pointInDirection(object, (angle * 180 / Math.PI) + 90)
 
 	})
 }
+
+const glide = function(object, vector, time){
+
+	return new Promise(async function(resolve, reject){
+
+		const centerVector = [app.screen.width / 2, app.screen.height / 2]
+		
+		const deltax = (vector[0] - (object.x - centerVector[0])) / 60 / (time / 1000);
+		
+		const deltay = ((vector[1]) - (object.y - centerVector[1])) / 60 / (time / 1000);
+
+		for (let i = 0; i < 60*(time/1000); i++){
+
+			await sleep((1/60) * 1000);
+
+			sys.movement.goTo(object, [(object.x - centerVector[0]) + deltax, (object.y - centerVector[1])*-1 + deltay])
+		}
+
+		resolve(true)
+	})
+}
+
+const mouse = function(){
+	
+	const centerVector = [app.screen.width / 2, app.screen.height / 2]
+
+	return {'x': app.renderer.plugins.interaction.mouse.global.x - centerVector[0], 'y': (app.renderer.plugins.interaction.mouse.global.y - centerVector[1])*-1}
+}
+
+const setSize = function(object, percentage){
+	object.scale.set(percentage/100, percentage/100)
+
+}
+const changeSizeBy = function(object, percentage){
+	object.scale.set(object.scale.x + percentage/100, object.scale.y + percentage/100)
+
+}
+
+
+//Object assignment
+const movement = {goTo, changeXBy, changeYBy, setXTo, setYTo, move, turnRight, turnLeft, pointInDirection, pointTowards, glide}
+const transform = {setSize, changeSizeBy}
+const sensors = {mouse}
+const sys = {movement, transform, sensors}
+
+
+
+//renderer
+var app = new PIXI.Application(640, 360, {backgroundColor : 0x1099bb});
+
+document.getElementById("rendererContainer").appendChild(app.view);
+PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
+
+
+var bunny = PIXI.Sprite.fromImage('assets/bunny.png')
+
+
+bunny.anchor.set(0.5);
+sys.transform.setSize(bunny, 150)
+
+
+app.stage.addChild(bunny);
+
+sys.movement.goTo(bunny, [0, 0])
+
+sys.movement.pointInDirection(90)
+
+let i = 0;
+
+app.ticker.add(function(delta) {
+	
+	i++;
+    sys.movement.pointTowards(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
+    sys.movement.move(bunny,1)
+    sys.transform.changeSizeBy(bunny, Math.sin(i/10)*20)
+    
+});
