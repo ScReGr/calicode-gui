@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
   height: 70px;
   align-items: center;
   margin-left: 1em;
-  margin-right: 1em;
+  margin-right: 1.2em;
 }
 .main-nav {
   display: flex;
