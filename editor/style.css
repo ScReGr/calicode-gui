@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 #fileContainer{
 	background-color: #0d0d0d;
 	position: absolute;
-	width: 563.333px;
+	width: 563.33333px;
 	height: calc(100% - 402px);
 	top: 402px;
 	min-height: 190px;
@@ -120,12 +120,12 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 #editorContainer{
 	background-color: #0d0d0d;
 	position: absolute;
-	width: calc(100% - 563px);
+	width: calc(100% - 564.33333px);
 	top: 71px;
 	height: calc(100% - 71px);
 	min-height: 550px;
 	min-width: 600px;
-	left: 563.333px;
+	left: 564.33333px;
 	border-left: 1px solid #303030;
 	
 }
