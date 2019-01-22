@@ -11,10 +11,12 @@
 	<body style="background-color:#0d0d0d">
 		<div style="height:2rem">
 					<nav class="navbar" id="topNavBar">
-						<a href="index.html" class="logo" style="text-decoration:none" id="buildNumberParent">
-							<img src="logo.svg" style="height:1.3rem;vertical-align:middle">
-							<h4 style="display:inline-block;color:white" id="buildNumber">&nbspCalicode</h4>
-						</a>
+						<div>
+							<a href="index.html" class="logo" style="text-decoration:none" id="buildNumberParent">
+								<img src="logo.svg" style="height:1.3rem;vertical-align:middle">
+								<h4 style="display:inline-block;color:white" id="buildNumber">&nbspCalicode</h4>
+							</a>
+						</div>
 						<ul class="main-nav">
 								<li>
 									<a href="search.html"><img src="search.svg" style="height:5rem;vertical-align:middle"></a>
@@ -34,7 +36,18 @@
 					<hr width="100%" size="1px" color="#303030" style="margin:0">
 				</div>
 		<div id="rendererContainer" class="container"></div>
-		<div id="fileContainer" class="container"></div>
+		<div id="fileContainer" class="container">
+			<div id="containerContent">
+				<h2 style="display:inline-block">Objects</h2><a href="#" id="newButton">+ New</a>
+			</div>
+		</div>
+		<div id="blockFamilyContainer" class="container">
+			<div id="containerContent">
+				<h2 style="display:inline-block">Blocks</h2><a href="#" id="newButton">+ Ext.</a>
+				<br>
+				<h2 style="display:inline-block">Families</h2><a href="#" id="newButton">+ New</a>
+			</div>
+		</div>
 		<div id="editorContainer" class="container"></div>
 
 	</body>

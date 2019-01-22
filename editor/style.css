@@ -115,17 +115,71 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	left: 0;
 }
 
+#containerContent{
+	margin-left: 1em;
+	margin-right:1em;
+}
 
+#newButton{
+	color:#a6a6a6;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:3px 5px 3px 5px;
+	border-radius:6px;
+	float:right;
+	margin-top: 1.25em;
+	text-decoration: none;
+	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight:bold;
+}
+
+#newButton _::-webkit-full-page-media, _:future, :root .safari_only {
+	color:#a6a6a6;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:3px 5px 3px 5px;
+	border-radius:6px;
+	float:right;
+	margin-top: 1.25em;
+	text-decoration: none;
+  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight:bold;
+}
+
+#newButton _:-ms-lang(x), _:-webkit-full-screen, .selector {
+	color:#a6a6a6;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:3px 5px 3px 5px;
+	border-radius:6px;
+	float:right;
+	margin-top: 1.25em;
+	text-decoration: none;
+  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight:bold;
+}
+
+#blockFamilyContainer{
+	background-color: #0d0d0d;
+	position: absolute;
+	width: calc( 100% - calc( calc(100% - 800px) + 590px));
+	top: 71px;
+	height: calc(100% - 71px);
+	left: 590px;
+	right: calc(100% - 800px);
+	border-left: 1px solid #303030;
+	
+}
 
 #editorContainer{
 	background-color: #0d0d0d;
 	position: absolute;
-	width: calc(100% - 590px);
+	width: calc(100% - 800px);
 	top: 71px;
 	height: calc(100% - 71px);
 	min-height: 550px;
 	min-width: 600px;
-	left: 590px;
+	left: 800px;
 	border-left: 1px solid #303030;
 	
 }
