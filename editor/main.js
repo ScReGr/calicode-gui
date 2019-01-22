@@ -213,7 +213,7 @@ const sys = {movement, transform, sensors}
 
 
 //renderer
-var app = new PIXI.Application(640, 360, {backgroundColor : 0x1099bb});
+var app = new PIXI.Application(533.333, 300, {backgroundColor : 0x1099bb});
 
 document.getElementById("rendererContainer").appendChild(app.view);
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;

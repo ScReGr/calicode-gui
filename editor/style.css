@@ -9,6 +9,13 @@
   src: url(https://cdn.glitch.com/4518f4ab-ad64-4308-9194-30e33ae8b42b%2FMontserrat-Bold.ttf?1547689484421);
 }
 
+body {
+  font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: white;
+  margin: 0;
+  
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
 }
@@ -21,70 +28,105 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
   font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
-body {
-	background-color: #000000;
-	font-family: 'Open Sans', sans-serif;
-	color: #ffffff;
-	margin-top: -1em;
- 	margin-bottom: 1em;
-	margin-left: 1em;
- 	margin-right: 1em;
-}
 
-.container{
-	background-color: #FFFFFF;
+.rounded-rectangle {
+  background-image: linear-gradient(-185deg, #3333cc, #cc3399);
+  border-radius: 0.35rem;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 
-#buildNumberParent{
-	position: absolute;
+.project {
+  width: 10em;
+  height: 5.6em;
+  background-image: linear-gradient(-185deg, #3333cc, #cc3399);
+  border-radius: 0.35rem;
+  line-height: 0;
 }
 
+.studio {
+  width: 5.6em;
+  height: 5.6em;
+  background-image: linear-gradient(-185deg, #3333cc, #cc3399);
+  border-radius: 0.35rem;
+  line-height: 0;
+}
+
+.user {
+  width: 4em;
+  height: 4em;
+  background-image: linear-gradient(-185deg, #3333cc, #cc3399);
+  border-radius: 10000rem;
+  line-height: 0;
+}
+
+.leftofsearch img {
+  display: none;
+}
+
+.flex-container {
+  display: flex;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
 .main-nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   list-style: none;
 }
 .main-nav li {
   margin: -1.2em;
 }
-
-
-#topNavBar{
-	background-color: #0d0d0d;
-	position: relative;
-	width: 100%;
-	height: 60px;
-	min-width: 1240px;
+.nav-links {
+  margin-left: 40px;
+  text-decoration: none;
+  color:white;
+  line-height:2em;
+  font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
 }
+.logo {margin-top: 0;}
 
 #rendererContainer{
 	position: absolute;
-	top: 60px;
+	top: 71px;
 	left: 0px;
-	width: 640px;
-	height: 360px;
+	width: 533.33333px;
+	height: 300px;
+	padding:15px;
+	border-bottom: 1px solid #303030;
 }
 
 #fileContainer{
-	background-color: #222222;
+	background-color: #0d0d0d;
 	position: absolute;
-	width: 640px;
-	height: calc(100% - 390px);
-	top: 400px;
+	width: 563.333px;
+	height: calc(100% - 402px);
+	top: 402px;
 	min-height: 190px;
 	left: 0;
 }
 
 
+
 #editorContainer{
-	background-color: #1a1a1a;
+	background-color: #0d0d0d;
 	position: absolute;
-	width: calc(100% - 640px);
-	top: 60px;
-	height: calc(100% - 50px);
+	width: calc(100% - 563px);
+	top: 71px;
+	height: calc(100% - 71px);
 	min-height: 550px;
 	min-width: 600px;
-	left: 640px;
+	left: 563.333px;
+	border-left: 1px solid #303030;
+	
 }
+
