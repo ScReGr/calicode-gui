@@ -235,8 +235,6 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	width: calc(100% - 800px);
 	top: 71px;
 	height: calc(100% - 71px);
-	min-height: 550px;
-	min-width: 600px;
 	left: 800px;
 	border-left: 1px solid #303030;
 	
