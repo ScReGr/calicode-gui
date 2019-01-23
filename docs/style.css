@@ -229,6 +229,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	height: calc(100% - 71px);
 	left: 590px;
 	right: calc(100% - 800px);
+	min-height: 535px;
 	border-left: 1px solid #303030;
 	
 }
@@ -242,6 +243,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	left: 800px;
 	border-left: 1px solid #303030;
 	min-width: 500px;
+	min-height: 535px;
 	
 }
 
