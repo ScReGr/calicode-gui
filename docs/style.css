@@ -9,6 +9,8 @@
   src: url(https://cdn.glitch.com/4518f4ab-ad64-4308-9194-30e33ae8b42b%2FMontserrat-Bold.ttf?1547689484421);
 }
 
+textarea, select, input, button { outline: none; }
+
 body {
   font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   color: white;
@@ -77,6 +79,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
   align-items: center;
   margin-left: 1em;
   margin-right: 1.2em;
+  min-width: 800px;
 }
 .main-nav {
   display: flex;
@@ -127,10 +130,11 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	padding:3px 5px 3px 5px;
 	border-radius:6px;
 	float:right;
-	margin-top: 1.25em;
+	margin-top: 2em;
 	text-decoration: none;
 	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
 	font-weight:bold;
+	font-size: 12px;
 }
 
 #newButton _::-webkit-full-page-media, _:future, :root .safari_only {
@@ -140,10 +144,11 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	padding:3px 5px 3px 5px;
 	border-radius:6px;
 	float:right;
-	margin-top: 1.25em;
+	margin-top: 2em;
 	text-decoration: none;
   	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
 	font-weight:bold;
+	font-size: 12px;
 }
 
 #newButton _:-ms-lang(x), _:-webkit-full-screen, .selector {
@@ -153,10 +158,62 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	padding:3px 5px 3px 5px;
 	border-radius:6px;
 	float:right;
-	margin-top: 1.25em;
+	margin-top: 2em;
 	text-decoration: none;
   	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
 	font-weight:bold;
+	font-size: 12px;
+}
+
+#menuItem{
+	color:white;
+	display:inline-block;
+	border-radius:6px;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;	
+}
+
+#menuItem _::-webkit-full-page-media, _:future, :root .safari_only {
+	color:white;
+	display:inline-block;
+	border-radius:6px;
+	text-decoration: none;
+	font-size: 16px;
+  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+#menuItem _:-ms-lang(x), _:-webkit-full-screen, .selector {
+	color:white;
+	display:inline-block;
+	border-radius:6px;
+	text-decoration: none;
+	font-size: 16px;
+  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+#searchInput {
+	background-color:#1c1c1c;
+	color: white;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:5px 5px 5px 5px;
+	border-radius:6px;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+#topButton{
+	color:white;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:5px 5px 5px 5px;
+	border-radius:6px;
+	text-decoration: none;
+	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight:bold;
+	font-size: 14px;
 }
 
 #blockFamilyContainer{
