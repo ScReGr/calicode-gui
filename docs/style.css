@@ -80,9 +80,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
   margin-left: 1em;
   margin-right: 1.2em;
   min-width: 800px;
-  width: 100%;
-  border-bottom: 1px solid #303030;
- 
+  max-width: 100%;
 }
 .main-nav {
   display: flex;
