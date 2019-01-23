@@ -78,6 +78,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
   height: 70px;
   align-items: center;
   margin-left: 1em;
+  min-width: 1000px;
   width: 98.8%;
 }
 .main-nav {
@@ -87,7 +88,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 }
 
 .left {
-	margin: -1.2em;
+	margin: -19px;
 	vertical-align:middle;
 	display: flex;
 	flex-direction: row;
@@ -99,8 +100,6 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
   margin-left: 40px;
   text-decoration: none;
   color:white;
-  line-height:2em;
-  font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 .logo {margin-top: 0;}
 
@@ -242,6 +241,12 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	height: calc(100% - 71px);
 	left: 800px;
 	border-left: 1px solid #303030;
+	min-width: 500px;
 	
+}
+
+.topLine {
+	margin-top:38px;
+	min-width:1400px
 }
 
