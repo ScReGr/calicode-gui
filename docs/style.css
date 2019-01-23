@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
   height: 70px;
   align-items: center;
   margin-left: 1em;
-  min-width: 1000px;
+  min-width: 1400px;
   width: 98.8%;
 }
 .main-nav {
@@ -249,6 +249,6 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 
 .topLine {
 	margin-top:0px;
-	min-width:1400px
+	min-width:1450px
 }
 
