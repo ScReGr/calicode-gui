@@ -15,7 +15,6 @@ body {
   font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   color: white;
   margin: 0;
-  overflow-x:hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,7 +77,6 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
   height: 70px;
   align-items: center;
   margin-left: 1em;
-  margin-right: 1.2em;
   width: 98.8%;
 }
 .main-nav {
@@ -86,8 +84,15 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
   flex-direction: row;
   list-style: none;
 }
-.main-nav li {
-  margin: -1.2em;
+
+.left {
+	margin: -1.2em;
+	vertical-align:middle;
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin-top: 0px;
+	
 }
 .nav-links {
   margin-left: 40px;
