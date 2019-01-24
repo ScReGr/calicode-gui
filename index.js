@@ -28,6 +28,6 @@ app.use(function (req, res, next) {
   });
 
 
-app.listen(80, () => console.log('Running Calicode Editor instance on port 80'))
+app.listen(80, () => console.log('Running Calicode GUI instance on port 80'))
 
 

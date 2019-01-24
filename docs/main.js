@@ -204,6 +204,7 @@ const changeSizeBy = function(object, percentage){
 }
 
 
+
 //Object assignment
 const movement = {goTo, changeXBy, changeYBy, setXTo, setYTo, move, turnRight, turnLeft, pointInDirection, pointTowards, glide}
 const transform = {setSize, changeSizeBy}
@@ -219,6 +220,7 @@ document.getElementById("rendererContainer").appendChild(app.view);
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 
+
 var bunny = PIXI.Sprite.fromImage('assets/bunny.png')
 
 
@@ -232,12 +234,14 @@ sys.movement.goTo(bunny, [0, 0])
 
 sys.movement.pointInDirection(90)
 
+
+
 let i = 0;
 
 app.ticker.add(function(delta) {
 	
 	i++;
-    sys.movement.pointTowards(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
+    sys.movement.goTo(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
     sys.movement.move(bunny,3)
     sys.transform.changeSizeBy(bunny, Math.sin(i/15)*10)
     

@@ -117,15 +117,17 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	background-color: #0d0d0d;
 	position: absolute;
 	width: 590px;
-	height: calc(100% - 397px);
+	height: calc(100% - 427px);
 	top: 397px;
 	min-height: 290px;
 	left: 0;
+	
 }
 
 #containerContent{
 	margin-left: 1em;
 	margin-right:1em;
+	
 }
 
 #newButton{
@@ -237,14 +239,14 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 #editorContainer{
 	background-color: #0d0d0d;
 	position: absolute;
-	width: calc(100% - 800px);
+	width: calc(100% - 830px);
 	top: 51px;
-	height: calc(100% - 51px);
+	height: calc(100% - 81px);
 	left: 800px;
 	border-left: 1px solid #303030;
 	min-width: 500px;
 	min-height: 635px;
-	
+	padding: 15px;
 }
 
 .topLine {
@@ -252,3 +254,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	min-width:1302px
 }
 
+canvas {
+	border-radius: 6px;
+	border: 1px solid #303030;
+}
