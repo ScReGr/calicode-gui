@@ -223,7 +223,7 @@ var bunny = PIXI.Sprite.fromImage('assets/bunny.png')
 
 
 bunny.anchor.set(0.5);
-sys.transform.setSize(bunny, 150)
+sys.transform.setSize(bunny, 50)
 
 
 app.stage.addChild(bunny);
@@ -238,7 +238,7 @@ app.ticker.add(function(delta) {
 	
 	i++;
     sys.movement.pointTowards(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
-    sys.movement.move(bunny,1)
-    sys.transform.changeSizeBy(bunny, Math.sin(i/10)*20)
+    sys.movement.move(bunny,3)
+    sys.transform.changeSizeBy(bunny, Math.sin(i/15)*10)
     
 });
