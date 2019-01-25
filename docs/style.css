@@ -1,12 +1,16 @@
 @font-face {
-  font-family: Montserat;
-  src: url(https://cdn.glitch.com/4518f4ab-ad64-4308-9194-30e33ae8b42b%2FMontserrat-Regular.ttf?1547689484543);
+    font-family: 'montserrat';
+    src: url('montserrat-regular-webfont.woff2') format('woff2'),
+         url('montserrat-regular-webfont.woff') format('woff');
+    font-style: normal;
 }
 
 @font-face {
-  font-family: Montserat;
-  font-weight: bold;
-  src: url(https://cdn.glitch.com/4518f4ab-ad64-4308-9194-30e33ae8b42b%2FMontserrat-Bold.ttf?1547689484421);
+    font-family: 'montserrat';
+    font-weight: bold;
+    src: url('montserrat-bold-webfont.woff2') format('woff2'),
+         url('montserrat-bold-webfont.woff') format('woff');
+    font-style: normal;
 }
 
 textarea, select, input, button { outline: none; }
@@ -16,18 +20,12 @@ body {
   color: white;
   margin: 0;
   overflow-y: auto;
+  
 }
+
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 and _::-webkit-full-page-media, _:future, :root .safari_only {
-  font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
-  font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: montserrat; "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 
@@ -140,35 +138,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	float:right;
 	margin-top: 2em;
 	text-decoration: none;
-	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
-	font-weight:bold;
-	font-size: 12px;
-}
-
-#newButton _::-webkit-full-page-media, _:future, :root .safari_only {
-	color:#a6a6a6;
-	display:inline-block;
-	border: 1px solid #303030;
-	padding:3px 5px 3px 5px;
-	border-radius:6px;
-	float:right;
-	margin-top: 2em;
-	text-decoration: none;
-  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
-	font-weight:bold;
-	font-size: 12px;
-}
-
-#newButton _:-ms-lang(x), _:-webkit-full-screen, .selector {
-	color:#a6a6a6;
-	display:inline-block;
-	border: 1px solid #303030;
-	padding:3px 5px 3px 5px;
-	border-radius:6px;
-	float:right;
-	margin-top: 2em;
-	text-decoration: none;
-  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: montserrat, "Helvetica Neue", helvetica, arial, sans-serif;
 	font-weight:bold;
 	font-size: 12px;
 }
@@ -191,37 +161,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	text-decoration: none;
 	padding: 6px;
 	font-weight:400;
-	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;	
-}
-
-#menuItem _::-webkit-full-page-media, _:future, :root .safari_only {
-	cursor: pointer;
-	font-size: 16px;  
-	border: none;
-	outline: none;
-	color: white;
-	background-color: inherit;
-	font-family: inherit;
-	margin: 0;
-	text-decoration: none;
-	padding: 6px;
-	font-weight:400;
-  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
-}
-
-#menuItem _:-ms-lang(x), _:-webkit-full-screen, .selector {
-	cursor: pointer;
-	font-size: 16px;  
-	border: none;
-	outline: none;
-	color: white;
-	background-color: inherit;
-	font-family: inherit;
-	margin: 0;
-	text-decoration: none;
-	padding: 6px;
-	font-weight:400;
-  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: montserrat, "Helvetica Neue", helvetica, arial, sans-serif;	
 }
 
 .dropdown-content {
@@ -271,7 +211,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	text-decoration: none;
 	font-size: 16px;
 	font-weight:400;
-	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: montserrat, "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 #searchInput:focus{
@@ -286,7 +226,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	padding:5px 5px 5px 5px;
 	border-radius:6px;
 	text-decoration: none;
-	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: montserrat, "Helvetica Neue", helvetica, arial, sans-serif;
 	font-weight:bold;
 	font-size: 14px;
 }
