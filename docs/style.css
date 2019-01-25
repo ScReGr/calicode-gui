@@ -187,8 +187,10 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	color: white;
 	background-color: inherit;
 	font-family: inherit;
-	margin: 0;
+	margin: -10px;
 	text-decoration: none;
+	padding: 6px;
+	font-weight:400;
 	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;	
 }
 
@@ -202,6 +204,8 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	font-family: inherit;
 	margin: 0;
 	text-decoration: none;
+	padding: 6px;
+	font-weight:400;
   	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
@@ -215,6 +219,8 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	font-family: inherit;
 	margin: 0;
 	text-decoration: none;
+	padding: 6px;
+	font-weight:400;
   	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
@@ -227,6 +233,8 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	border-radius: 6px;
 	z-index: 1;
 	font-size:13px;
+	margin-top:6px;
+	margin-left:-5px;
 }
 
 .dropdown-content a {
@@ -236,11 +244,17 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	text-decoration: none;
 	display: block;
 	text-align: left;
-	color:black;
+	color:#333333;
+	font-weight:400;
 }
 
 .dropdown-content a:hover {
-	background-color: lightgray;
+	background-color: #f2f2f2;
+}
+
+#menuItem:hover {
+	background-color: #303030;
+	border-radius: 6px;
 }
 
 #menuItem:hover .dropdown-content {
@@ -256,6 +270,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	border-radius:6px;
 	text-decoration: none;
 	font-size: 16px;
+	font-weight:400;
 	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
