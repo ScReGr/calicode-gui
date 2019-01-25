@@ -264,7 +264,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 }
 
 .topButton{
-	transition: background-color .25s ease-in-out;
+	transition: .25s ease-in-out;
 	color:white;
 	display:inline-block;
 	border: 1px solid #303030;
@@ -277,10 +277,12 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 }
 
 #shareButton:hover{
-	background-color: #FF1493;
+	background-color: white;
+	color: black;
 }
 #saveButton:hover{
-	background-color: #4AC948;
+	background-color: white;
+	color:black;
 }
 
 #blockFamilyContainer{
