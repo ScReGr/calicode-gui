@@ -1,0 +1,322 @@
+@font-face {
+  font-family: Montserat;
+  src: url(https://cdn.glitch.com/4518f4ab-ad64-4308-9194-30e33ae8b42b%2FMontserrat-Regular.ttf?1547689484543);
+}
+
+@font-face {
+  font-family: Montserat;
+  font-weight: bold;
+  src: url(https://cdn.glitch.com/4518f4ab-ad64-4308-9194-30e33ae8b42b%2FMontserrat-Bold.ttf?1547689484421);
+}
+
+textarea, select, input, button { outline: none; }
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: white;
+  margin: 0;
+  overflow-y: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 and _::-webkit-full-page-media, _:future, :root .safari_only {
+  font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
+  font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+
+.rounded-rectangle {
+  background-image: linear-gradient(-185deg, #3333cc, #cc3399);
+  border-radius: 0.35rem;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+
+.project {
+  width: 10em;
+  height: 5.6em;
+  background-image: linear-gradient(-185deg, #3333cc, #cc3399);
+  border-radius: 0.35rem;
+  line-height: 0;
+}
+
+.studio {
+  width: 5.6em;
+  height: 5.6em;
+  background-image: linear-gradient(-185deg, #3333cc, #cc3399);
+  border-radius: 0.35rem;
+  line-height: 0;
+}
+
+.user {
+  width: 4em;
+  height: 4em;
+  background-image: linear-gradient(-185deg, #3333cc, #cc3399);
+  border-radius: 10000rem;
+  line-height: 0;
+}
+
+.leftofsearch img {
+  display: none;
+}
+
+.flex-container {
+  display: flex;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  margin-left: 1em;
+  min-width: 1302px;
+  width: 98.8%;
+}
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.left {
+	margin: -19px;
+	vertical-align:middle;
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin-top: 0px;
+	
+}
+.nav-links {
+  margin-left: 40px;
+  text-decoration: none;
+  color:white;
+}
+.logo {margin-top: 0;}
+
+#rendererContainer{
+	position: absolute;
+	top: 51px;
+	left: 0px;
+	width: 560px;
+	height: 315px;
+	padding:15px;
+	border-bottom: 1px solid #303030;
+}
+
+#fileContainer{
+	background-color: #0d0d0d;
+	position: absolute;
+	width: 590px;
+	height: calc(100% - 427px);
+	top: 397px;
+	min-height: 290px;
+	left: 0;
+	
+}
+
+#containerContent{
+	margin-left: 1em;
+	margin-right:1em;
+	
+}
+
+#newButton{
+	transition: background-color .25s ease-in-out;
+	color:#a6a6a6;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:3px 5px 3px 5px;
+	border-radius:6px;
+	float:right;
+	margin-top: 2em;
+	text-decoration: none;
+	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight:bold;
+	font-size: 12px;
+}
+
+#newButton _::-webkit-full-page-media, _:future, :root .safari_only {
+	color:#a6a6a6;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:3px 5px 3px 5px;
+	border-radius:6px;
+	float:right;
+	margin-top: 2em;
+	text-decoration: none;
+  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight:bold;
+	font-size: 12px;
+}
+
+#newButton _:-ms-lang(x), _:-webkit-full-screen, .selector {
+	color:#a6a6a6;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:3px 5px 3px 5px;
+	border-radius:6px;
+	float:right;
+	margin-top: 2em;
+	text-decoration: none;
+  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight:bold;
+	font-size: 12px;
+}
+
+#newButton:hover{
+  background-color:#303030 ;
+}
+
+
+
+#menuItem{
+	cursor: pointer;
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+	text-decoration: none;
+	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;	
+}
+
+#menuItem _::-webkit-full-page-media, _:future, :root .safari_only {
+	cursor: pointer;
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+	text-decoration: none;
+  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+#menuItem _:-ms-lang(x), _:-webkit-full-screen, .selector {
+	cursor: pointer;
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+	text-decoration: none;
+  	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 120px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border-radius: 6px;
+	z-index: 1;
+	font-size:13px;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 10px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	color:black;
+}
+
+.dropdown-content a:hover {
+	background-color: lightgray;
+}
+
+#menuItem:hover .dropdown-content {
+	display: block;
+}
+
+#searchInput {
+	background-color:#1c1c1c;
+	color: white;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:5px 5px 5px 5px;
+	border-radius:6px;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+#searchInput:focus{
+	background-color: #303030;
+}
+
+.topButton{
+	transition: background-color .25s ease-in-out;
+	color:white;
+	display:inline-block;
+	border: 1px solid #303030;
+	padding:5px 5px 5px 5px;
+	border-radius:6px;
+	text-decoration: none;
+	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight:bold;
+	font-size: 14px;
+}
+
+#shareButton:hover{
+	background-color: #FF1493;
+}
+#saveButton:hover{
+	background-color: #4AC948;
+}
+
+#blockFamilyContainer{
+	background-color: #0d0d0d;
+	position: absolute;
+	width: calc( 100% - calc( calc(100% - 800px) + 590px));
+	top: 51px;
+	height: calc(100% - 51px);
+	left: 590px;
+	right: calc(100% - 800px);
+	min-height: 635px;
+	border-left: 1px solid #303030;
+	
+}
+
+#editorContainer{
+	background-color: #0d0d0d;
+	position: absolute;
+	width: calc(100% - 831px);
+	top: 51px;
+	height: calc(100% - 81px);
+	left: 800px;
+	border-left: 1px solid #303030;
+	min-width: 500px;
+	min-height: 635px;
+	padding: 15px;
+}
+
+.topLine {
+	margin-top:0px;
+	width: calc(100% - 2px);
+
+	min-width:1302px;
+}
+
+canvas {
+	border-radius: 6px;
+	border: 1px solid #303030;
+}

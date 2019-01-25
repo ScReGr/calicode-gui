@@ -5,7 +5,7 @@ const app = express()
 const fs = require("fs")
 
 
-app.use(express.static(path.join(__dirname, "docs")))
+app.use(express.static(path.join(__dirname, "editor")))
 
 
 app.use(function (req, res, next) {
