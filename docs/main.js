@@ -1,3 +1,19 @@
+var rgbToHex = function (rgb) { 
+  var hex = Number(rgb).toString(16);
+  if (hex.length < 2) {
+       hex = "0" + hex;
+  }
+  return hex;
+};
+
+var fullColorHex = function(r,g,b) {   
+  var red = rgbToHex(r);
+  var green = rgbToHex(g);
+  var blue = rgbToHex(b);
+  return red+green+blue;
+};
+
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -203,11 +219,29 @@ const changeSizeBy = function(object, percentage){
 
 }
 
+const setEffect = function(object, effect, value){
+	switch (effect){
 
+		case "color":
+
+
+			console.log(Math.abs(value - 257))
+			break;
+	}
+}
+
+const changeEffectBy = function(object, effect, value){
+	switch (effect){
+		case "color":
+
+			object.tint += value/256;
+			break;
+	}
+}
 
 //Object assignment
 const movement = {goTo, changeXBy, changeYBy, setXTo, setYTo, move, turnRight, turnLeft, pointInDirection, pointTowards, glide}
-const transform = {setSize, changeSizeBy}
+const transform = {setSize, changeSizeBy, setEffect, changeEffectBy}
 const sensors = {mouse}
 const sys = {movement, transform, sensors}
 
@@ -235,14 +269,16 @@ sys.movement.goTo(bunny, [0, 0])
 sys.movement.pointInDirection(90)
 
 
-
 let i = 0;
+
 
 app.ticker.add(function(delta) {
 	
 	i++;
-    sys.movement.goTo(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
-    sys.movement.move(bunny,3)
+   sys.movement.pointTowards(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
+    sys.movement.move(bunny, 1)
     sys.transform.changeSizeBy(bunny, Math.sin(i/15)*10)
+    sys.transform.setEffect(bunny, 'color', i)
+
     
 });

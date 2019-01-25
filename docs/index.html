@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Calicode</title>
-		<link rel="shortcut icon" href="icon.png">
+		<link rel="shortcut icon" href="assets/editor/icon.png">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
@@ -14,10 +14,9 @@
 					<nav class="navbar" id="topNavBar">
 						<div>
 							<a href="index.html" class="logo" style="text-decoration:none" id="buildNumberParent">
-								<img src="logo.svg" style="height:1.3rem;vertical-align:middle">
+								<img src="assets/editor/logo.svg" style="height:1.3rem;vertical-align:middle">
 								<h4 style="display:inline-block;color:white" id="buildNumber">&nbspCalicode</h4>
-							</a>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 							<button href="#" id="menuItem">File
 								<div class="dropdown-content">
 									<a href="#" style="border-radius: 6px 6px 0px 0px">Save</a>
@@ -26,8 +25,7 @@
 									<a href="#" style="border-radius: 0px 0px 6px 6px">Export</a>
 								</div>
 							</button>
-							
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 							<button href="#" id="menuItem">Edit
 								<div class="dropdown-content">
 									<a href="#" style="border-radius: 6px 6px 0px 0px">Undo</a>
@@ -35,33 +33,32 @@
 									<a href="#" style="border-radius: 0px">Delete</a>
 									<a href="#" style="border-radius: 0px 0px 6px 6px">Duplicate</a>
 								</div>
-							</button>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 							<input id="searchInput"  value="Calicode Project">
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="#" id="topButton">Save</a>
-						<a href="#" id="topButton">Share</a>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<a href="#" class="topButton" id="saveButton">Save</a>
+						<a href="#" class="topButton" id="shareButton">Share</a>
 						</div>
 						
 						<ul class="main-nav">
 								<li class="left">
-									<a href="search.html"><img src="search.svg" style="height:5rem;vertical-align:middle"></a>
+									<a href="search.html"><img src="assets/editor/search.svg" style="height:5rem;vertical-align:middle"></a>
 								</li>
 								<li class="left">
-										<a href="create.html"><img src="create.svg" style="height:5rem;vertical-align:middle"></a>
+										<a href="create.html"><img src="assets/editor/create.svg" style="height:5rem;vertical-align:middle"></a>
 								</li>
 								<li class="left">
-									<a href="mystuff.html"><img src="mystuff.svg" style="height:5rem;vertical-align:middle;"></a>
+									<a href="mystuff.html"><img src="assets/editor/mystuff.svg" style="height:5rem;vertical-align:middle;"></a>
 								</li>
 								<li>
-										<a href="profile.html"><img src="avatar.svg" style="height:5rem;vertical-align:middle;margin-left:-1.2em"></a>
+										<a href="profile.html"><img src="assets/editor/avatar.svg" style="height:5rem;vertical-align:middle;margin-left:-1.2em"></a>
 								</li>
 								<br>
 						</ul>
 					</nav>
 					
 				</div>
-		<hr width="100%" size="1px" color="#303030" class="topLine">
+		<hr size="1px" color="#303030" class="topLine">
 		
 		<div id="rendererContainer" class="container"></div>
 		<div id="fileContainer" class="container">

@@ -131,6 +131,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 }
 
 #newButton{
+	transition: background-color .25s ease-in-out;
 	color:#a6a6a6;
 	display:inline-block;
 	border: 1px solid #303030;
@@ -171,6 +172,12 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	font-weight:bold;
 	font-size: 12px;
 }
+
+#newButton:hover{
+  background-color:#303030 ;
+}
+
+
 
 #menuItem{
 	cursor: pointer;
@@ -252,7 +259,12 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
-#topButton{
+#searchInput:focus{
+	background-color: #303030;
+}
+
+.topButton{
+	transition: background-color .25s ease-in-out;
 	color:white;
 	display:inline-block;
 	border: 1px solid #303030;
@@ -262,6 +274,13 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
 	font-weight:bold;
 	font-size: 14px;
+}
+
+#shareButton:hover{
+	background-color: #FF1493;
+}
+#saveButton:hover{
+	background-color: #4AC948;
 }
 
 #blockFamilyContainer{
@@ -280,7 +299,7 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 #editorContainer{
 	background-color: #0d0d0d;
 	position: absolute;
-	width: calc(100% - 830px);
+	width: calc(100% - 831px);
 	top: 51px;
 	height: calc(100% - 81px);
 	left: 800px;
@@ -292,7 +311,9 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 
 .topLine {
 	margin-top:0px;
-	min-width:1302px
+	width: calc(100% - 2px);
+
+	min-width:1302px;
 }
 
 canvas {
