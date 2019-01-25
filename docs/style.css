@@ -173,30 +173,71 @@ h1, h2, h3, h4, h5, h6 and _:-ms-lang(x), _:-webkit-full-screen, .selector {
 }
 
 #menuItem{
-	color:white;
-	display:inline-block;
-	border-radius:6px;
+	cursor: pointer;
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
 	text-decoration: none;
-	font-size: 16px;
 	font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;	
 }
 
 #menuItem _::-webkit-full-page-media, _:future, :root .safari_only {
-	color:white;
-	display:inline-block;
-	border-radius:6px;
+	cursor: pointer;
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
 	text-decoration: none;
-	font-size: 16px;
   	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 #menuItem _:-ms-lang(x), _:-webkit-full-screen, .selector {
-	color:white;
-	display:inline-block;
-	border-radius:6px;
+	cursor: pointer;
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
 	text-decoration: none;
-	font-size: 16px;
   	font-family: Montserat, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 120px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border-radius: 6px;
+	z-index: 1;
+	font-size:13px;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 10px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	color:black;
+}
+
+.dropdown-content a:hover {
+	background-color: lightgray;
+}
+
+#menuItem:hover .dropdown-content {
+	display: block;
 }
 
 #searchInput {
