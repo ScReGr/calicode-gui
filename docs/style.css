@@ -15,6 +15,10 @@
 
 textarea, select, input, button { outline: none; }
 
+html {
+  text-rendering: optimizeSpeed;
+}
+
 body {
   font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   color: white;
