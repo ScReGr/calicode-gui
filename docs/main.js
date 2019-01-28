@@ -275,7 +275,7 @@ let i = 0;
 app.ticker.add(function(delta) {
 	
 	i++;
-   sys.movement.pointTowards(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
+    sys.movement.pointTowards(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
     sys.movement.move(bunny, 1)
     sys.transform.changeSizeBy(bunny, Math.sin(i/15)*10)
     sys.transform.setEffect(bunny, 'color', i)
