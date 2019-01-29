@@ -1,3 +1,45 @@
+const hexToRgb = function(val){
+
+	return {"red": `0x${val[0]+val[1]}`*1, "green": `0x${val[2]+val[3]}`*1, "blue": `0x${val[4]+val[5]}`*1}
+
+}
+
+
+const chrgb = function(hex, val){
+
+	const colors = hexToRgb(hex);
+
+	if(colors.blue == 0){
+		
+		if(colors.green == 0){
+
+			if(colors.red == 0){
+
+				return rgb(255 + val);
+
+			}else{
+
+				return rgb(340 - Math.abs(colors.red/3 - 85) + val)
+			}
+
+		}else{
+			return rgb(85-Math.abs(colors.green/3 - 85) + val)
+
+		}
+
+	}else{
+
+		if(colors.green == 0){
+			return rgb(170+Math.abs(colors.blue/3 - 85) + val)
+
+		}else{
+			return rgb(170-Math.abs(colors.blue/3 - 85) + val)
+
+		}
+
+	}
+}
+
 var rgbToHex = function (rgb) { 
   var hex = Number(rgb).toString(16);
   if (hex.length < 2) {
@@ -13,6 +55,13 @@ var fullColorHex = function(r,g,b) {
   return red+green+blue;
 };
 
+const rgb = function(val){
+	r_ = 510 - Math.abs((val*(255/85)+510) % (2*510) - 510) - 255;
+	g_ = 510 - Math.abs((val*(255/85)+255) % (2*510) - 510) - 255;
+	b_ = 510 - Math.abs(val*(255/85) % (2*510) - 510) - 255;
+
+	return fullColorHex((Math.abs(r_) + r_)/2, (Math.abs(g_) + g_)/2, (Math.abs(b_) + b_)/2)
+}
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -225,7 +274,7 @@ const setEffect = function(object, effect, value){
 		case "color":
 
 
-			console.log(Math.abs(value - 257))
+			object.tint = "0x" + rgb(value);
 			break;
 	}
 }
@@ -234,7 +283,7 @@ const changeEffectBy = function(object, effect, value){
 	switch (effect){
 		case "color":
 
-			object.tint += value/256;
+			object.tint = '0x'+ chrgb(object.tint.toString().substring(2, 8), value);
 			break;
 	}
 }
@@ -278,7 +327,7 @@ app.ticker.add(function(delta) {
     sys.movement.pointTowards(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
     sys.movement.move(bunny, 1)
     sys.transform.changeSizeBy(bunny, Math.sin(i/15)*10)
-    sys.transform.setEffect(bunny, 'color', i)
+    sys.transform.changeEffectBy(bunny, 'color', 5)
 
     
 });
