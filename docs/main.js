@@ -293,7 +293,6 @@ PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 var bunny = {'renderSprite': PIXI.Sprite.fromImage('assets/bunny.png'), 'effects': {'color': 0}}
 
-bunny.renderSprite.tint = 0x0000ff
 
 bunny.renderSprite.anchor.set(0.5);
 sys.transform.setSize(bunny.renderSprite, 50)
@@ -313,6 +312,7 @@ app.ticker.add(function(delta) {
 	i++;
     sys.movement.pointTowards(bunny.renderSprite, [sys.sensors.mouse().x, sys.sensors.mouse().y])
     sys.movement.move(bunny.renderSprite, 1)
+    sys.transform.changeEffectBy(bunny, 'color', i/6)
     sys.transform.changeSizeBy(bunny.renderSprite, Math.sin(i/15)*10)
     
 
