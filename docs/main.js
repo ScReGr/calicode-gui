@@ -1,44 +1,18 @@
+const fmax = function(max, value){
+	return Math.abs((Math.abs(max - value) + (max - value))/2 - max)
+}
+
+const fmin = function(min, value){
+	return (Math.abs(value - min) + (value - min))/2 + min;
+}
+
+
 const hexToRgb = function(val){
 
 	return {"red": `0x${val[0]+val[1]}`*1, "green": `0x${val[2]+val[3]}`*1, "blue": `0x${val[4]+val[5]}`*1}
 
 }
 
-
-const chrgb = function(hex, val){
-
-	const colors = hexToRgb(hex);
-
-	if(colors.blue == 0){
-		
-		if(colors.green == 0){
-
-			if(colors.red == 0){
-
-				return rgb(255 + val);
-
-			}else{
-
-				return rgb(340 - Math.abs(colors.red/3 - 85) + val)
-			}
-
-		}else{
-			return rgb(85-Math.abs(colors.green/3 - 85) + val)
-
-		}
-
-	}else{
-
-		if(colors.green == 0){
-			return rgb(170+Math.abs(colors.blue/3 - 85) + val)
-
-		}else{
-			return rgb(170-Math.abs(colors.blue/3 - 85) + val)
-
-		}
-
-	}
-}
 
 var rgbToHex = function (rgb) { 
   var hex = Number(rgb).toString(16);
@@ -55,12 +29,18 @@ var fullColorHex = function(r,g,b) {
   return red+green+blue;
 };
 
-const rgb = function(val){
-	r_ = 510 - Math.abs((val*(255/85)+510) % (2*510) - 510) - 255;
-	g_ = 510 - Math.abs((val*(255/85)+255) % (2*510) - 510) - 255;
-	b_ = 510 - Math.abs(val*(255/85) % (2*510) - 510) - 255;
 
-	return fullColorHex((Math.abs(r_) + r_)/2, (Math.abs(g_) + g_)/2, (Math.abs(b_) + b_)/2)
+const rgb = function(object, val){
+	object.effects.color = val;
+	let finalValue = (val * 6)+255;
+
+	let red = fmin(255, fmax(510 , 765 - Math.abs((finalValue + 510) % (2*765) - 765)))-255
+	let green = fmin(255, fmax(510 , 765 - Math.abs(finalValue % (2*765) - 765)))-255
+	let blue = fmin(255, fmax(510 , 765 - Math.abs((finalValue - 510) % (2*765) - 765)))-255
+
+	return fullColorHex(red, green, blue)
+	//return console.log(`R: ${r_}, G: ${g_}, B:${b_}`)
+
 }
 
 function sleep(ms) {
@@ -259,6 +239,11 @@ const mouse = function(){
 	return {'x': app.renderer.plugins.interaction.mouse.global.x - centerVector[0], 'y': (app.renderer.plugins.interaction.mouse.global.y - centerVector[1])*-1}
 }
 
+const colorEffect = function(object){
+	return object.effects.color;
+
+}
+
 const setSize = function(object, percentage){
 	object.scale.set(percentage/100, percentage/100)
 
@@ -268,13 +253,15 @@ const changeSizeBy = function(object, percentage){
 
 }
 
+//EFFECTS USE CALICODE SPRITE OBJECT, NOT PIXIJS SPRITE OBJECT
+
 const setEffect = function(object, effect, value){
 	switch (effect){
 
 		case "color":
 
 
-			object.tint = "0x" + rgb(value);
+			object.renderSprite.tint = "0x" + rgb(object, value);
 			break;
 	}
 }
@@ -283,7 +270,7 @@ const changeEffectBy = function(object, effect, value){
 	switch (effect){
 		case "color":
 
-			object.tint = '0x'+ chrgb(object.tint.toString().substring(2, 8), value);
+			object.renderSprite.tint = '0x'+ (rgb(object, object.effects.color + 1))
 			break;
 	}
 }
@@ -291,7 +278,7 @@ const changeEffectBy = function(object, effect, value){
 //Object assignment
 const movement = {goTo, changeXBy, changeYBy, setXTo, setYTo, move, turnRight, turnLeft, pointInDirection, pointTowards, glide}
 const transform = {setSize, changeSizeBy, setEffect, changeEffectBy}
-const sensors = {mouse}
+const sensors = {mouse, colorEffect}
 const sys = {movement, transform, sensors}
 
 
@@ -304,30 +291,30 @@ PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 
 
-var bunny = PIXI.Sprite.fromImage('assets/bunny.png')
+var bunny = {'renderSprite': PIXI.Sprite.fromImage('assets/bunny.png'), 'effects': {'color': 0}}
+
+bunny.renderSprite.tint = 0x0000ff
+
+bunny.renderSprite.anchor.set(0.5);
+sys.transform.setSize(bunny.renderSprite, 50)
 
 
-bunny.anchor.set(0.5);
-sys.transform.setSize(bunny, 50)
+app.stage.addChild(bunny.renderSprite);
 
+sys.movement.goTo(bunny.renderSprite, [0, 0])
 
-app.stage.addChild(bunny);
-
-sys.movement.goTo(bunny, [0, 0])
-
-sys.movement.pointInDirection(90)
+sys.movement.pointInDirection(bunny.renderSprite, 90)
 
 
 let i = 0;
 
-
 app.ticker.add(function(delta) {
 	
 	i++;
-    sys.movement.pointTowards(bunny, [sys.sensors.mouse().x, sys.sensors.mouse().y])
-    sys.movement.move(bunny, 1)
-    sys.transform.changeSizeBy(bunny, Math.sin(i/15)*10)
-    sys.transform.changeEffectBy(bunny, 'color', 5)
+    sys.movement.pointTowards(bunny.renderSprite, [sys.sensors.mouse().x, sys.sensors.mouse().y])
+    sys.movement.move(bunny.renderSprite, 1)
+    sys.transform.changeSizeBy(bunny.renderSprite, Math.sin(i/15)*10)
+    
 
     
 });
