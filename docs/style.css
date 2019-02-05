@@ -134,8 +134,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #newButton{
-	transition: background-color .25s ease-in-out;
-	color:#7E92A6;
+	transition:.25s ease-in-out;
+	color:white;
 	display:inline-block;
 	border: 1px solid #2c333a;
 	padding:3px 5px 3px 5px;
@@ -149,7 +149,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #newButton:hover{
-  background-color:#2c333a ;
+	background-color:#0263ff;
+	border-color:#0263ff;
 }
 
 
