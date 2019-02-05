@@ -107,19 +107,20 @@ h1, h2, h3, h4, h5, h6 {
 
 #rendererContainer{
 	position: absolute;
+	background-color: #202429;
 	top: 51px;
 	left: 0px;
 	width: 560px;
 	height: 315px;
 	padding:15px;
-	border-bottom: 1px solid #303030;
+	border-bottom: 1px solid #2c333a;
 }
 
 #fileContainer{
-	background-color: #0d0d0d;
+	background-color: #202429;
 	position: absolute;
 	width: 590px;
-	height: calc(100% - 427px);
+	height: calc(100% - 397px);
 	top: 397px;
 	min-height: 290px;
 	left: 0;
@@ -134,9 +135,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #newButton{
 	transition: background-color .25s ease-in-out;
-	color:#a6a6a6;
+	color:#7E92A6;
 	display:inline-block;
-	border: 1px solid #303030;
+	border: 1px solid #2c333a;
 	padding:3px 5px 3px 5px;
 	border-radius:6px;
 	float:right;
@@ -148,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #newButton:hover{
-  background-color:#303030 ;
+  background-color:#2c333a ;
 }
 
 
@@ -183,7 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .dropdown-content a {
 	float: none;
-	color: black;
+	color: #191d21;
 	padding: 10px;
 	text-decoration: none;
 	display: block;
@@ -197,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #menuItem:hover {
-	background-color: #303030;
+	background-color: #202429;
 	border-radius: 6px;
 }
 
@@ -206,10 +207,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #searchInput {
-	background-color:#1c1c1c;
+	transition: background-color .25s ease-in-out;
+	background-color:#191d21;
 	color: white;
 	display:inline-block;
-	border: 1px solid #303030;
+	border: 1px solid #24292e;
 	padding:5px 5px 5px 5px;
 	border-radius:6px;
 	text-decoration: none;
@@ -219,14 +221,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #searchInput:focus{
-	background-color: #303030;
+	background-color: #24292e;
 }
 
 .topButton{
 	transition: .25s ease-in-out;
 	color:white;
 	display:inline-block;
-	border: 1px solid #303030;
+	border: 1px solid #24292e;
 	padding:5px 5px 5px 5px;
 	border-radius:6px;
 	text-decoration: none;
@@ -236,16 +238,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #shareButton:hover{
-	background-color: white;
-	color: black;
+	background-color: #0263ff;
+	color: white;
+	border-color: #0263ff;
 }
 #saveButton:hover{
-	background-color: white;
-	color:black;
+	background-color: #0263ff;
+	color:white;
+	border-color: #0263ff;
 }
 
 #blockFamilyContainer{
-	background-color: #0d0d0d;
+	background-color: #202429;
 	position: absolute;
 	width: calc( 100% - calc( calc(100% - 800px) + 590px));
 	top: 51px;
@@ -253,18 +257,18 @@ h1, h2, h3, h4, h5, h6 {
 	left: 590px;
 	right: calc(100% - 800px);
 	min-height: 635px;
-	border-left: 1px solid #303030;
+	border-left: 1px solid #2c333a;
 	
 }
 
 #editorContainer{
-	background-color: #0d0d0d;
+	background-color: #191d21;
 	position: absolute;
 	width: calc(100% - 831px);
 	top: 51px;
 	height: calc(100% - 81px);
 	left: 800px;
-	border-left: 1px solid #303030;
+	border-left: 1px solid #2c333a;
 	min-width: 500px;
 	min-height: 635px;
 	padding: 15px;
@@ -279,5 +283,9 @@ h1, h2, h3, h4, h5, h6 {
 
 canvas {
 	border-radius: 6px;
-	border: 1px solid #303030;
+	border: 1px solid #2c333a;
+}
+
+.navContainer {
+	background-color:#191d21;
 }
