@@ -154,6 +154,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+#newButton:active{
+	background-color:#17334F;
+	border-color:#17334F;
+}
 
 #menuItem{
 	cursor: pointer;
@@ -167,7 +171,8 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: none;
 	padding: 6px;
 	font-weight:400;
-	font-family: montserrat, "Helvetica Neue", helvetica, arial, sans-serif;	
+	font-family: montserrat, "Helvetica Neue", helvetica, arial, sans-serif;
+	transition:.25s ease-in-out;	
 }
 
 .dropdown-content {
@@ -181,6 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size:13px;
 	margin-top:6px;
 	margin-left:-5px;
+	transition:.25s ease-in-out;
 }
 
 .dropdown-content a {
@@ -192,6 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: left;
 	color:#0b0d0f;
 	font-weight:400;
+	transition:.25s ease-in-out;
 }
 
 .dropdown-content a:hover {
@@ -203,7 +210,12 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 6px;
 }
 
-#menuItem:hover .dropdown-content {
+#menuItem:focus {
+	background-color: #17334F;
+	border-radius: 6px;
+}
+
+#menuItem:focus .dropdown-content {
 	display: block;
 }
 
@@ -251,6 +263,17 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #0263ff;
 	color:white;
 	border-color: #0263ff;
+}
+
+#shareButton:active{
+	background-color: #17334F;
+	color: white;
+	border-color: #17334F;
+}
+#saveButton:active{
+	background-color: #17334F;
+	color:white;
+	border-color: #17334F;
 }
 
 #blockFamilyContainer{
